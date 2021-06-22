@@ -13,16 +13,22 @@ import java.util.List;
 // responsible for displaying data from the model into a row in the recyclver view
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
 
+    public interface OnSingleClickListener {
+        void onSingleClicked(int position);
+    }
+
     public interface OnLongClickListener {
         void onItemLongClicked(int position);
     }
 
     List<String> items;
     OnLongClickListener onLongClickListener;
+    OnSingleClickListener onSingleClickListener;
 
-    public ItemsAdapter(List<String> items, OnLongClickListener onLongClickListener) {
+    public ItemsAdapter(List<String> items, OnLongClickListener onLongClickListener, OnSingleClickListener onSingleClickListener) {
         this.items = items;
         this.onLongClickListener = onLongClickListener;
+        this.onSingleClickListener = onSingleClickListener;
     }
 
     @NonNull
@@ -68,6 +74,14 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
                     // notify the listener which position was long pressed
                     onLongClickListener.onItemLongClicked(getAdapterPosition());
                     return true;
+                }
+            });
+
+            tvItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // notify the listener which position was single clicked
+                    onSingleClickListener.onSingleClicked(getAdapterPosition());
                 }
             });
         }
