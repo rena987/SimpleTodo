@@ -1,3 +1,5 @@
+
+
 # Project 1 - *Simple Todo*
 
 **Simple Todo** is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
@@ -26,13 +28,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://user-images.githubusercontent.com/47072485/123012519-60ef9f00-d390-11eb-8acc-1cd2327587b1.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/).
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
